@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "matrix_utils.h"
+#ifndef MATRIX_UTILS_H
+#define MATRIX_UTILS_H
 
 /**
  * @brief Lê os valores da matriz especificada a partir da entrada padrão.
@@ -7,15 +7,7 @@
  * @param cols Número de colunas da matriz.
  * @param matrix Matriz a ser preenchida.
  */
-void matrix_read(int rows, int cols, int matrix[rows][cols]){
-    
-    for(int i = 0; i < rows; i++){
-        for(int j = 0; j < cols; j++){
-            scanf("%d", &matrix[i][j]);
-        }
-        
-    }
-}
+void matrix_read(int rows, int cols, int matrix[rows][cols]);
 
 /**
  * @brief Imprime a matriz especificada na saída padrão.
@@ -23,29 +15,7 @@ void matrix_read(int rows, int cols, int matrix[rows][cols]){
  * @param cols Número de colunas da matriz.
  * @param matrix Matriz a ser impressa. Após a impressão da matriz, deve ser impressa uma quebra de linha.
  */
-void matrix_print(int rows, int cols, int matrix[rows][cols]){
-    int primeiro;
-
-    for(int i = 0; i < rows; i++){
-        printf("|");
-        primeiro = 1;
-
-        for(int j = 0; j < cols; j++){
-            if(primeiro){
-                printf("%d", matrix[i][j]);
-                primeiro = 0;
-
-            }else{
-            printf(" %d", matrix[i][j]);
-
-            }
-        }
-        printf("|");
-        printf("\n");
-    }
-    printf("\n");
-
-}
+void matrix_print(int rows, int cols, int matrix[rows][cols]);
 
 /**
  * @brief Verifica se é possível somar duas matrizes.
@@ -55,9 +25,7 @@ void matrix_print(int rows, int cols, int matrix[rows][cols]){
  * @param cols2 Número de colunas da segunda matriz.
  * @return 1 se for possível somar as matrizes, 0 caso contrário.
  */
-int possible_matrix_sum(int rows1, int cols1, int rows2, int cols2){
-    return rows1 == rows2 && cols1 == cols2;
-}
+int possible_matrix_sum(int rows1, int cols1, int rows2, int cols2);
 
 /**
  * @brief Verifica se é possível subtrair duas matrizes.
@@ -67,9 +35,7 @@ int possible_matrix_sum(int rows1, int cols1, int rows2, int cols2){
  * @param cols2 Número de colunas da segunda matriz.
  * @return 1 se for possível subtrair as matrizes, 0 caso contrário.
  */
-int possible_matrix_sub(int rows1, int cols1, int rows2, int cols2){
-    return rows1 == rows2 && cols1 == cols2;
-}
+int possible_matrix_sub(int rows1, int cols1, int rows2, int cols2);
 
 /**
  * @brief Verifica se é possível multiplicar duas matrizes.
@@ -77,9 +43,7 @@ int possible_matrix_sub(int rows1, int cols1, int rows2, int cols2){
  * @param rows2 Número de linhas da segunda matriz.
  * @return 1 se for possível multiplicar as matrizes, 0 caso contrário.
  */
-int possible_matrix_multiply(int cols1, int rows2){
-    return cols1 == rows2;
-}
+int possible_matrix_multiply(int cols1, int rows2);
 
 /**
  * @brief Soma duas matrizes e armazena o resultado em result. Não é feito teste de possibilidade de soma.
@@ -91,15 +55,7 @@ int possible_matrix_multiply(int cols1, int rows2){
  * @param matrix2 Segunda matriz.
  * @param result Matriz que armazenará o resultado da soma.
  */
-void matrix_add(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols1]){
-    int i, j;
-
-    for(i = 0; i < rows1; i++){
-        for(j = 0; j < cols1; j++){
-            result[i][j] = matrix1[i][j] + matrix2[i][j];
-        }
-    }
-}
+void matrix_add(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols1]);
 
 /**
  * @brief Subtrai duas matrizes e armazena o resultado em result. Não é feito teste de verificação de subtração.
@@ -111,15 +67,7 @@ void matrix_add(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int 
  * @param matrix2 Segunda matriz.
  * @param result Matriz que armazenará o resultado da subtração.
  */
-void matrix_sub(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols1]){
-    int i, j;
-
-    for(i = 0; i < rows1; i++){
-        for(j = 0; j < cols1; j++){
-            result[i][j] = matrix1[i][j] - matrix2[i][j];
-        }
-    }
-}
+void matrix_sub(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols1]);
 
 /**
  * @brief Multiplica duas matrizes e armazena o resultado em result. Não é feito teste de verificação para a multiplicação. 
@@ -132,21 +80,7 @@ void matrix_sub(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int 
  * @param matrix2 Segunda matriz.
  * @param result Matriz que armazenará o resultado da multiplicação.
  */
-void matrix_multiply(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols2]){
-    int a, i, j, soma;
-
-    for(i = 0; i < rows1; i++){
-        for(j = 0; j < cols2; j++){
-
-            result[i][j] = 0;
-            soma = 0;
-            for(a = 0; a < rows2; a++){
-                soma += (matrix1[i][a] * matrix2[a][j]);
-            }
-            result[i][j] = soma;
-        }
-    }
-}
+void matrix_multiply(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols2]);
 
 /**
  * @brief Transpõe a matriz especificada. O resultado da transposta deve ser armazenado em result.
@@ -155,15 +89,7 @@ void matrix_multiply(int rows1, int cols1, int matrix1[rows1][cols1], int rows2,
  * @param matrix Matriz a ser transposta.
  * @param result Matriz que armazenará o resultado da transposição.
  */
-void transpose_matrix(int rows, int cols, int matrix[rows][cols], int result[cols][rows]){
-    int i, j;
-
-    for(i = 0; i < cols; i++){
-        for(j = 0; j < rows; j++){
-            result[i][j] = matrix[j][i];
-        }
-    }
-}
+void transpose_matrix(int rows, int cols, int matrix[rows][cols], int result[cols][rows]);
 
 /**
  * @brief Multiplica a matriz especificada por um escalar, mantendo o resultado na própria matriz.
@@ -172,14 +98,7 @@ void transpose_matrix(int rows, int cols, int matrix[rows][cols], int result[col
  * @param matrix Matriz a ser multiplicada.
  * @param scalar Escalar a ser multiplicado.
  */
-void scalar_multiply(int rows, int cols, int matrix[rows][cols], int scalar){
-    int i, j;
-
-    for(i = 0; i < rows; i++){
-        for(j = 0; j < cols; j++){
-            matrix[i][j] = scalar * matrix[i][j];
-        }
-    }
-}
+void scalar_multiply(int rows, int cols, int matrix[rows][cols], int scalar);
 
 
+#endif
