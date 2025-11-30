@@ -1,0 +1,15 @@
+==44590== Memcheck, a memory error detector
+==44590== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==44590== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==44590== Command: Resultados/Igor/data/prog Resultados/Igor/data/Casos/3
+==44590== Parent PID: 44589
+==44590== 
+==44590== 
+==44590== HEAP SUMMARY:
+==44590==     in use at exit: 0 bytes in 0 blocks
+==44590==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==44590== 
+==44590== All heap blocks were freed -- no leaks are possible
+==44590== 
+==44590== For lists of detected and suppressed errors, rerun with: -s
+==44590== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
