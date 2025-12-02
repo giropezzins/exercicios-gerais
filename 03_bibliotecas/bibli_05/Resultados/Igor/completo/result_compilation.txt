@@ -1,0 +1,14 @@
+string_utils.c: In function ‘string_upper’:
+string_utils.c:43:14: warning: ‘i’ is used uninitialized [-Wuninitialized]
+   43 |     while(str[i] != '\0'){
+      |              ^
+string_utils.c:41:9: note: ‘i’ was declared here
+   41 |     int i;
+      |         ^
+string_utils.c: In function ‘string_lower’:
+string_utils.c:61:14: warning: ‘i’ is used uninitialized [-Wuninitialized]
+   61 |     while(str[i] != '\0'){
+      |              ^
+string_utils.c:59:9: note: ‘i’ was declared here
+   59 |     int i;
+      |         ^

@@ -1,0 +1,56 @@
+==31090== Memcheck, a memory error detector
+==31090== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==31090== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==31090== Command: Resultados/Igor/string_utils/prog Resultados/Igor/string_utils/Casos/2
+==31090== Parent PID: 31089
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x10951D: string_upper (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x10934A: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x1094CD: string_upper (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x10934A: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x1094E1: string_upper (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x10934A: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x1094F5: string_upper (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x10934A: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x10950A: string_upper (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x10934A: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x109593: string_lower (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x109387: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x109543: string_lower (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x109387: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x109557: string_lower (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x109387: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x10956B: string_lower (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x109387: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== Use of uninitialised value of size 8
+==31090==    at 0x109580: string_lower (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090==    by 0x109387: main (in /home/giro/progeba/prog_II/exercicios-gerais/03_bibliotecas/bibli_05/Resultados/Igor/string_utils/prog)
+==31090== 
+==31090== 
+==31090== HEAP SUMMARY:
+==31090==     in use at exit: 0 bytes in 0 blocks
+==31090==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==31090== 
+==31090== All heap blocks were freed -- no leaks are possible
+==31090== 
+==31090== Use --track-origins=yes to see where uninitialised values come from
+==31090== For lists of detected and suppressed errors, rerun with: -s
+==31090== ERROR SUMMARY: 136 errors from 10 contexts (suppressed: 0 from 0)
