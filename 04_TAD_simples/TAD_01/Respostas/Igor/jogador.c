@@ -1,16 +1,17 @@
-#ifndef _JOGADOR_H
-#define _JOGADOR_H
+#include <stdio.h>
+#include "jogador.h"
 
 #include "tabuleiro.h"
+#include "jogada.h"
 
 
 #define ID_JOGADOR_1 1
 #define ID_JOGADOR_2 2
 
 
-typedef struct{
-    int id;
-} tJogador;
+//typedef struct{
+    //int id;
+//} tJogador;
 
 /**
  * Cria um jogador com o id passado como parâmetro e retorna o jogador criado.
@@ -19,7 +20,11 @@ typedef struct{
  * 
  * @return tJogador o jogador criado.
  */
-tJogador CriaJogador(int idJogador);
+tJogador CriaJogador(int idJogador){
+    tJogador jogador;
+    jogador.id = idJogador;
+    return jogador;
+}
 
 
 /**
@@ -30,7 +35,10 @@ tJogador CriaJogador(int idJogador);
  * 
  * @return o tabuleiro atualizado com a jogada do jogador.
  */
-tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro);
+tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro){
+    tJogada jogada;
+    jogada = LeJogada()
+}
 
 
 /**
@@ -43,4 +51,3 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro);
  */
 int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro);
 
-#endif
